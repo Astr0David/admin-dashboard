@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 65px 1fr;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar main-content";
+  height: 100vh;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 5px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #020617;
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: 65px 1fr;
+  grid-template-areas:
+  "sidebar-logo"
+  "sidebar-menu";
+}
+
+.main-content {
+  grid-area: main-content;
+  padding: 20px;
+  overflow-y: none;
+  background-color: #f8fafc;
+}
+
+.sidebar .sidebar-logo {
+    grid-area: sidebar-logo;
+    border-bottom: 1px dashed #393945;
+}
