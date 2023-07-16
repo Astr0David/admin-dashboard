@@ -26,7 +26,6 @@ body {
   background-color: #f8fafc;
   position: sticky;
   top: 0;
-  z-index: 1;
   padding: 5px;
 }
 
@@ -51,4 +50,13 @@ body {
 .sidebar .sidebar-logo {
     grid-area: sidebar-logo;
     border-bottom: 1px dashed #393945;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .sidebar-logo img {
+    max-width: 170px;
+    min-width: 170px;
+    height: 40px;
+    padding-left: 10px;
 }
