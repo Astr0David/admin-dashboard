@@ -36,8 +36,8 @@ body {
   display: grid;
   grid-template-rows: 65px 1fr;
   grid-template-areas:
-  "sidebar-logo"
-  "sidebar-menu";
+    "sidebar-logo"
+    "sidebar-menu";
 }
 
 .main-content {
@@ -48,15 +48,62 @@ body {
 }
 
 .sidebar .sidebar-logo {
-    grid-area: sidebar-logo;
-    border-bottom: 1px dashed #393945;
-    display: flex;
-    align-items: center;
+  grid-area: sidebar-logo;
+  border-bottom: 1px dashed #393945;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-y: none;
 }
 
 .sidebar .sidebar-logo img {
-    max-width: 170px;
-    min-width: 170px;
-    height: 40px;
-    padding-left: 10px;
+  max-width: 170px;
+  min-width: 170px;
+  height: 40px;
+  padding-left: 13px;
+}
+
+.sidebar .sidebar-menu {
+  grid-area: sidebar-menu;
+  overflow-y: auto;
+}
+
+.nav {
+  margin-top: 20px;
+  padding: 21px;
+  list-style: none;
+  font-size: 1rem;
+  flex-direction: column;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 45px;
+  filter: brightness(50%);
+  transition: 0.1s ease;
+}
+
+.nav li:hover {
+  filter: brightness(100%);
+}
+
+.nav li.active {
+  filter: brightness(100%);
+}
+
+.nav li i:first-child {
+  margin-right: 10px; 
+}
+
+.nav li a {
+  padding-left: 11px;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  flex: 1;
+}
+
+.nav li .fa-chevron-right {
+  margin-left: 10px; 
 }
