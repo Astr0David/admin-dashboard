@@ -23,7 +23,7 @@ body {
 
 .navbar {
   grid-area: navbar;
-  background-color: #f8fafc;
+  background-color: white;
   position: sticky;
   top: 0;
   padding: 5px;
