@@ -19,7 +19,7 @@ body {
     "sidebar navbar"
     "sidebar main-content";
   height: 100vh;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
 
 .container.shorter {
@@ -104,7 +104,7 @@ body {
   align-items: center;
   padding-bottom: 45px;
   filter: brightness(50%);
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
 
 .nav li:hover {
@@ -127,12 +127,18 @@ body {
   color: white;
   font-weight: 300;
   flex: 1;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
 
 .nav li i.fa-chevron-right {
   margin-left: 10px;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
+}
+
+.nav li i.fa-chevron-right.active{
+  margin-left: 10px;
+  transition: 0.2s ease;
+  transform: rotate(180deg);
 }
 
 .navbar .shorten-button {
@@ -269,7 +275,7 @@ i.hidden {
       "navbar"
       "main-content";
     height: 100vh;
-    transition: 0.1s ease;
+    transition: 0.2s ease;
   }
 
   .sidebar {
@@ -332,3 +338,4 @@ i.hidden {
     height: 55px;
   }
 }
+
