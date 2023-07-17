@@ -13,12 +13,5 @@ sizebutton.addEventListener("click", function () {
   removableArrows.forEach(function (removablearrows) {
     removablearrows.classList.toggle("hidden");
   });
-  if (logoImage.src.endsWith("logo.png")) {
-    logoImage.src = "logo-small.png";
-    logoImage.classList.toggle("short");
-  } else {
-    logoImage.src = "logo.png";
-    logoImage.classList.remove("short");
-  }
   mainContainer.classList.toggle("shorter");
 });

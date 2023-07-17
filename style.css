@@ -51,6 +51,7 @@ body {
   grid-template-areas:
     "sidebar-logo"
     "sidebar-menu";
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -70,18 +71,18 @@ body {
 }
 
 .sidebar .sidebar-logo img {
-  max-width: 170px;
-  min-width: 170px;
-  height: 40px;
+  max-width: 178px;
+  min-width: 178px;
+  height: 42px;
   padding-left: 13px;
   transition: 0.1s ease;
 }
 
 .sidebar .sidebar-logo img.short {
+  max-width: 173px;
+  min-width: 173px;
   height: 40px;
-  padding-left: 12px;
-  min-width: 49px;
-  max-width: 49px;
+  padding-left: 14px;
 }
 
 .sidebar .sidebar-menu {
@@ -107,6 +108,7 @@ body {
 
 .nav li:hover {
   filter: brightness(100%);
+  margin-left: 5px;
 }
 
 .nav li.active {
@@ -116,6 +118,7 @@ body {
 .nav li i:first-child {
   margin-right: 10px;
 }
+
 
 .nav li a {
   padding-left: 11px;
@@ -136,7 +139,8 @@ body {
   font-size: 25px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 20px;
+  padding-right: 50px;
 }
 
 .navbar .shorten-button i {
@@ -153,4 +157,81 @@ i.hidden {
 
 .hidden {
   display: none;
+}
+
+.search i {
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding-right: 2%;
+  flex: 1;
+
+}
+
+.search input {
+  height: 30px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.nav-end {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 11px;
+}
+
+.nav-end i {
+  font-size: 20px;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+
+.nav-end img {
+  height: 100%;
+  padding: 0px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-end p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav li a{
+    display: none;
+  }
+
+  .nav li i.fa-chevron-right {
+    display: none;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 65px 1fr;
+    grid-template-areas:
+      "sidebar navbar"
+      "sidebar main-content";
+    height: 100vh;
+  }
+/* 
+  .sidebar .sidebar-logo img {
+    height: 40px;
+    padding-left: 12px;
+    min-width: 45px;
+    max-width: 49px;
+  } */
+
 }
