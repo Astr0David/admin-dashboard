@@ -135,7 +135,7 @@ body {
   transition: 0.2s ease;
 }
 
-.nav li i.fa-chevron-right.active{
+.nav li i.fa-chevron-right.active {
   margin-left: 10px;
   transition: 0.2s ease;
   transform: rotate(180deg);
@@ -309,7 +309,7 @@ i.hidden {
   }
 
   .nav-end i {
-    font-size: 15px;
+    font-size: 20px;
     padding: 0px 4px;
   }
 
@@ -338,4 +338,3 @@ i.hidden {
     height: 55px;
   }
 }
-
