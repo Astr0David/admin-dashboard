@@ -27,6 +27,8 @@ body {
   position: sticky;
   top: 0;
   padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar {
@@ -106,4 +108,16 @@ body {
 
 .nav li .fa-chevron-right {
   margin-left: 10px;
+}
+
+.navbar .shorten-button {
+  height: 100%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navbar .shorten-button i {
+  cursor: pointer;
 }
