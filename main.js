@@ -22,7 +22,6 @@ sizebutton.addEventListener("click", function () {
 if (mobileSidebarButton) {
   mobileSidebarButton.addEventListener("click", () => {
     sidebar.style.left = "0";
-
   });
 }
 
