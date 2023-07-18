@@ -227,6 +227,187 @@ i.hidden {
   white-space: nowrap;
 }
 
+.topbar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topbar .date input[type="date"] {
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  background-color: #cbd5e1;
+  border-radius: 5px;
+  padding: 0.9rem 1.8rem;
+  text-align: center;
+}
+
+.topbar .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.topbar .buttons button {
+  background-color: #1e293b;
+  color: white;
+  font-size: 17px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 5px;
+  border: none;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.topbar .buttons button:hover {
+  filter: brightness(70%);
+}
+
+.topbar .buttons button:active {
+  transform: scale(1.05);
+}
+
+.info-one {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(500px, 0.375fr)) repeat(1, minmax(334px, 0.25fr));
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+    "pillone pilltwo updates"
+    "pillthree pillfour updates";
+  gap: 1.5rem;
+}
+
+
+.pillone {
+  grid-area: pillone;
+}
+
+.pillone,.pilltwo,.pillthree,.pillfour {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data .info p {
+  padding-top: 5px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.data .info h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+}
+
+.lastmonth {
+  margin-top: 20px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  padding: 7px;
+  font-weight: 300;
+  margin-top: auto;
+}
+
+.lastmonth span {
+  color: green;
+  font-weight: 400;
+}
+
+.data .icon i {
+  font-size: 80px;
+}
+
+.pilltwo {
+  grid-area: pilltwo;
+}
+
+.pillthree {
+  grid-area: pillthree;
+}
+
+.pillfour {
+  grid-area: pillfour;
+}
+
+.updates {
+  grid-area: updates;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.updatecontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.updates .title {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.update {
+  display: flex;
+  padding-bottom: 18px;
+  padding-right: 15px;
+}
+
+.update .updatepic {
+  display: inline-block;
+  align-items: center;
+}
+.update .updatepic img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.updates .updatetext {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.updates .updatetext h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.updates .updatetext p {
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.updates .updatetext .time {
+  padding-bottom: 2px;
+  font-weight: 400;
+}
+
+.updatelast {
+  margin-bottom: -10px;
+}
+
+
+
 @media screen and (max-width: 1200px) {
   .nav li a {
     display: none;
@@ -336,5 +517,45 @@ i.hidden {
 
   .sidebar .sidebar-logo {
     height: 55px;
+  }
+
+  .topbar .buttons {
+    padding-top: 30px;
+  }
+
+  .topbar .date {
+    margin-top: 30px;
+  }
+
+  .topbar {
+    margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 596px) {
+  .topbar .date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .topbar .date input {
+    width: 100%;
+  }
+  .topbar .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+  }
+  
+  .topbar .buttons button {
+    margin-left: 0px;
+    width: 33%;
+  }
+
+  .topbar .buttons button.middle {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }

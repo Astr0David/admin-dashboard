@@ -30,3 +30,38 @@ if (closeSidebarButton) {
     sidebar.style.left = "-100%";
   });
 }
+
+const contentContainter = document.querySelector(".main-content");
+const firstInfo = document.querySelector(".info-one")
+
+function handleContainerWidthChange() {
+  if(contentContainter.offsetWidth <= 751) {
+    firstInfo.style.gridTemplateColumns = "repeat(1, 1fr)";
+    firstInfo.style.gridTemplateRows = "repeat(4, 1fr) repeat(1, 3fr)";
+    firstInfo.style.gridTemplateAreas = `
+      "pillone" 
+      "pilltwo"
+      "pillthree"
+      "pillfour"
+      "updates"
+    `
+   } else if (contentContainter.offsetWidth <= 1505) {
+    firstInfo.style.gridTemplateColumns = "repeat(2, 1fr)";
+    firstInfo.style.gridTemplateRows = "repeat(2, 1fr) repeat(1, 1fr)";
+    firstInfo.style.gridTemplateAreas = `
+      "pillone pilltwo"
+      "pillthree pillfour"
+      "updates updates"
+    `
+  } else{
+    firstInfo.style.gridTemplateColumns = "repeat(2,minmax(500px, 0.375fr)) repeat(1, minmax(334px, 0.25fr))";
+    firstInfo.style.gridTemplateRows = "repeat(2,1fr)";
+    firstInfo.style.gridTemplateAreas = `
+    "pillone pilltwo updates"
+    "pillthree pillfour updates"
+    `
+  }
+}
+
+handleContainerWidthChange();
+window.addEventListener('resize', handleContainerWidthChange);
