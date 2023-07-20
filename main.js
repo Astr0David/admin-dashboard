@@ -47,7 +47,7 @@ function handleContainerWidthChange() {
     `
    } else if (contentContainter.offsetWidth <= 1505) {
     firstInfo.style.gridTemplateColumns = "repeat(2, 1fr)";
-    firstInfo.style.gridTemplateRows = "repeat(2, 1fr) repeat(1, 1fr)";
+    firstInfo.style.gridTemplateRows = "repeat(2, 0.5fr) repeat(1, 1fr)";
     firstInfo.style.gridTemplateAreas = `
       "pillone pilltwo"
       "pillthree pillfour"

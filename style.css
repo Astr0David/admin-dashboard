@@ -279,7 +279,7 @@ i.hidden {
   grid-template-areas:
     "pillone pilltwo updates"
     "pillthree pillfour updates";
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 
@@ -416,6 +416,73 @@ i.hidden {
   padding: 0.5rem;
 }
 
+.info-two {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(1fr));
+  gap: 2rem;
+}
+
+.the-table h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.table {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+.table table {
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+.table table thead th {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.table table tbody td {
+  height: 3rem;
+  border-bottom: 1px solid #cbd5e1;
+  font-weight: 300;
+}
+
+.table table tbody tr:last-child td {
+  border: none;
+}
+
+.details {
+  color: blue;
+  cursor: pointer;
+}
+
+.green {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.show {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: darkblue;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1200px) {
   .nav li a {
@@ -540,6 +607,14 @@ i.hidden {
 
   .topbar {
     margin-top: -25px;
+  }
+
+  .table table thead tr th:last-child, .table table thead tr th:nth-child(2) {
+    display: none;
+  }
+
+  .table table tbody tr td:last-child, .table table tbody tr td:nth-child(2) {
+    display: none;
   }
 }
 
