@@ -609,11 +609,13 @@ i.hidden {
     margin-top: -25px;
   }
 
-  .table table thead tr th:last-child, .table table thead tr th:nth-child(2) {
+  .table table thead tr th:last-child,
+  .table table thead tr th:nth-child(2) {
     display: none;
   }
 
-  .table table tbody tr td:last-child, .table table tbody tr td:nth-child(2) {
+  .table table tbody tr td:last-child,
+  .table table tbody tr td:nth-child(2) {
     display: none;
   }
 }
