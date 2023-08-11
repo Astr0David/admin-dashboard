@@ -20,6 +20,7 @@ body {
     "sidebar main-content";
   height: 100vh;
   transition: 0.2s ease;
+  overflow: hidden;
 }
 
 .container.shorter {
